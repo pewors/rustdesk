@@ -1,4 +1,4 @@
-// main window right pane
+﻿// main window right pane
 
 import 'dart:async';
 import 'dart:convert';
@@ -77,37 +77,17 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
                           decoration: TextDecoration.underline, fontSize: em)))
               .marginOnly(left: em),
         );
-
-    setupServerWidget() => Flexible(
-          child: Offstage(
-            offstage: !(!_svcStopped.value &&
-                stateGlobal.svcStatus.value == SvcStatus.ready &&
-                _svcIsUsingPublicServer.value),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(', ', style: TextStyle(fontSize: em)),
-                Flexible(
-                  child: InkWell(
-                    onTap: onUsePublicServerGuide,
-                    child: Row(
-                      children: [
-                        Flexible(
-                          child: Text(
-                            translate('setup_server_tip'),
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: em),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
-        );
+    Widget setupServerWidget() => Flexible(
+       child: Offstage(
+         offstage: !(!_svcStopped.value &&
+             stateGlobal.svcStatus.value == SvcStatus.ready &&
+             _svcIsUsingPublicServer.value),
+         child: Row(
+           crossAxisAlignment: CrossAxisAlignment.center,
+           children: [], 
+         ),
+       ),
+     );
 
     basicWidget() => Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -614,3 +594,4 @@ class _ConnectionPageState extends State<ConnectionPage>
         constraints: const BoxConstraints(maxWidth: 600), child: w);
   }
 }
+
