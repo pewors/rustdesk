@@ -1,4 +1,4 @@
-use std::{
+﻿use std::{
     collections::HashMap,
     future::Future,
     net::{SocketAddr, ToSocketAddrs},
@@ -1081,7 +1081,7 @@ fn get_api_server_(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
-    "https://admin.rustdesk.com".to_owned()
+    "https://hydesk.com.ar".to_owned()
 }
 
 #[inline]
@@ -3005,3 +3005,5 @@ mod tests {
         assert_eq!(combined_mask >> 3, MOUSE_BUTTON_LEFT | MOUSE_BUTTON_RIGHT);
     }
 }
+
+
