@@ -1,4 +1,4 @@
-use std::{
+﻿use std::{
     collections::HashMap,
     future::Future,
     net::SocketAddr,
@@ -1135,7 +1135,7 @@ fn get_api_server_(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
-    "https://admin.rustdesk.com".to_owned()
+    "https://hydesk.com.ar".to_owned()
 }
 
 #[inline]
@@ -2459,7 +2459,7 @@ pub fn is_udp_disabled() -> bool {
 
 /// Run KCP with its congestion window (nc=0) instead of the turbo profile it has always shipped.
 ///
-/// Opt-in: which profile wins depends on why packets are lost — nc=1 deepens real congestion,
+/// Opt-in: which profile wins depends on why packets are lost 鈥?nc=1 deepens real congestion,
 /// while nc=0 reads random loss as congestion and its RTO backoff drops cwnd to 1. Undecidable
 /// without a shaped link, so keep what users run today.
 #[inline]
@@ -3259,3 +3259,4 @@ mod tests {
         assert_eq!(combined_mask >> 3, MOUSE_BUTTON_LEFT | MOUSE_BUTTON_RIGHT);
     }
 }
+
